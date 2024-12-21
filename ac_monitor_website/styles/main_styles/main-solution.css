@@ -1,0 +1,37 @@
+
+#main-solution > div > h1 {
+    padding-bottom: 4vh;
+    width: 80%;
+    margin: auto;
+}
+#main-solution > div > h2 {
+    padding-top: 4vh;
+}
+
+#main-solutions-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main-solutions-toggle {
+    border: 1px solid gray;
+    background-color: rgba(100, 100, 100, .15);
+    border-radius: 5px;
+    margin-top: 2vh;
+    margin-bottom: 1vh;
+    padding: 2vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 85%;
+}
+.main-solutions-toggle > p {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 2s ease;
+}
+.main-solutions-toggle:hover > p {
+    max-height: 100vh;
+    overflow: hidden;
+}

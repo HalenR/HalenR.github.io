@@ -1,0 +1,8 @@
+#main-title {
+    height: calc(100vh - var(--navbar-height));
+    padding-top: 0;
+    padding-bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

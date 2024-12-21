@@ -1,0 +1,25 @@
+main {
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: var(--general-font-size);
+}
+main h1 {
+    font-size: var(--main-title-font-size);
+}
+main h2 {
+    font-size: var(--main-subtitle-font-size);
+}
+main h3 {
+    font-size: var(--main-boxsubtitle-font-size)
+}
+.main-item {
+    padding-top: 20vh;
+    padding-bottom: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+}

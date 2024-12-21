@@ -1,0 +1,25 @@
+:root {
+    --text-color: rgb(255,255,255);
+    --background-color: rgb(10,10,10);
+    --navbar-height: 15vh;
+    --main-title-font-size: 45px;
+    --main-subtitle-font-size: 35px;
+    --main-boxsubtitle-font-size: 30px;
+    --general-font-size: 20px;
+    --box-colors: rgb(20, 20, 20);
+}
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    text-decoration: none;
+    color: var(--text-color);
+    font-family: 'Calibri';
+    font-weight: 100;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    background-color: var(--background-color);
+}
