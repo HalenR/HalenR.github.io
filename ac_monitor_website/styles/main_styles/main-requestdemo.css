@@ -1,0 +1,28 @@
+#main-form {
+    max-width: 640px;
+    width: 100%;
+    min-height: 3700px;
+}
+/* Styles for when the width is less than 1000px */
+@media (max-width: 640px) {
+    #main-form {
+        height: calc(3700px + 1.5*(640px - 100vw))
+    }
+}
+@media (max-width: 576px) {
+    #main-form {
+        height: calc(4700px + 1.5*(576px - 100vw))
+    }
+}
+@media (max-width: 403px) {
+    #main-form {
+        height: calc(5000px + 7.75*(403px - 100vw))
+    }
+}
+
+#main-requestdemo {
+    width: 100%;
+}
+#main-requestdemo > div {
+    width: 100%;
+}

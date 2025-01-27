@@ -1,0 +1,71 @@
+
+/* Remove larger nav */
+#navbar-pagelinks {
+    display: none;
+}
+
+#navbar-pagelinks-verticle {
+    pointer-events: auto;
+    display: block;
+    height: calc(.7 * 15vh);
+    width: calc(.7 * 15vh);
+    margin-right: calc(.15 * 15vh);
+}
+#navbar-pagelinks-verticle-icon {
+    box-sizing: border-box;
+    background-color: rgba(150, 150, 150, .1);
+    float: right;
+    display: flex;
+    flex-direction: column;
+    backdrop-filter: blur(10px);
+    height: 100%;
+    width: 100%;
+    border: 3px solid gray;
+    border-radius: 25px;
+    transition: width .75s, height .75s ease;
+    overflow: hidden;
+}
+#navbar-pagelinks-verticle-icon > div {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    
+
+}
+#navbar-pagelinks-verticle-icon > div > div {
+    background-color: gray;
+    border-radius: 20px;
+    height: 60%;
+    width: 7.5%;
+    margin: 6%;
+    filter: blur(0px);
+    opacity: 1;
+    transition: filter 1.25s, opacity 2s ease;
+}
+#navbar-pagelinks-verticle-icon > a {
+    display: none;
+}
+
+#navbar-pagelinks-verticle-icon:hover {
+    height: 35vh;
+    width: 50vw;
+}
+#navbar-pagelinks-verticle-icon:hover > div {
+    height: 0px;
+}
+#navbar-pagelinks-verticle-icon:hover > a {
+    display: flex;
+}
+#navbar-pagelinks-verticle-icon:hover > div > div {
+    filter: blur(15px);
+    opacity: 0;
+}
+.navbar-pagelinks-item {
+    display: flex;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
