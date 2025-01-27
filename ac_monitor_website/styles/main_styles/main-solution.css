@@ -15,8 +15,8 @@
 }
 
 .main-solutions-toggle {
-    border: 1px solid gray;
-    background-color: rgba(100, 100, 100, .15);
+    border: 1px solid var(--border-colors);
+    background-color: var(--box-colors);
     border-radius: 5px;
     margin-top: 2vh;
     margin-bottom: 1vh;

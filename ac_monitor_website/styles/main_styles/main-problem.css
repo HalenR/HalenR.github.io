@@ -6,7 +6,7 @@
     width: 100%
 }
 .main-problem-subitem {
-    border: 1px solid gray;
+    border: 1px solid var(--border-colors);
     background-color: var(--box-colors);
     border-radius: 5px;
     width: 45vw;
