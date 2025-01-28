@@ -1,0 +1,32 @@
+:root {
+    --navbar-height: 15vh;
+    --navbar-media-change: 713px;
+    --main-title-font-size: 45px;
+    --main-subtitle-font-size: 35px;
+    --main-boxsubtitle-font-size: 30px;
+    --general-font-size: 20px;
+
+    /* Colors */
+    --text-color: rgb(255,255,255);
+    --background-color: rgb(10, 10, 10);
+    --box-colors: rgb(20, 20, 20);
+    --border-colors: rgb(128, 128, 128);
+    --navbar-border-color: rgba(150, 150, 150, .25);
+    --navbar-item-inactive-color: rgba(150, 150, 150, .1);
+    --navbar-item-active-color: rgba(150, 150, 150, .25);
+}
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    text-decoration: none;
+    color: var(--text-color);
+    font-family: 'Calibri';
+    font-weight: 100;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    background-color: var(--background-color);
+}

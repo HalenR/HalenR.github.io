@@ -1,0 +1,59 @@
+header {
+    position: sticky;
+    z-index: 99;
+    display: flex;
+    height: var(--navbar-height);
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: transparent;
+    pointer-events: none; /*transparent areas dont block below css events*/
+}
+#navbar-home {
+    pointer-events: auto;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#navbar {
+    background-color: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+#navbar-pagelinks-verticle {
+    display: none;
+    pointer-events: auto;
+}
+#navbar-pagelinks {
+    pointer-events: auto;
+    position: absolute;
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    border: 1px solid var(--navbar-border-color);
+    overflow: hidden;
+    height: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+
+    display: flex;
+    align-items: center;
+    text-wrap: nowrap;
+}
+.navbar-pagelinks-item {
+    pointer-events: auto;
+    padding: 0 25px;
+    height: 100%;
+    font-size: 20.5px;
+    background-color: var(--navbar-item-inactive-color);
+    display: flex;
+    align-items: center;
+    transition: background-color .1s ease-out 100ms;
+}
+.navbar-pagelinks-item:hover {
+    pointer-events: auto;
+    background-color: var(--navbar-item-active-color);
+}

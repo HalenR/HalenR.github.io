@@ -1,0 +1,22 @@
+.appear-on-scroll {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(-100%);
+    transition: opacity 1.25s, filter 1.25s, transform 1.25s;
+
+}
+.appear-on-scroll-show {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+}
+
+.appear-on-scroll-delay1 {
+    transition-delay: 200ms;
+}
+
+@media(prefers-reduced-motion) {
+    .appear-on-scroll {
+        transition: none;
+    }
+}
