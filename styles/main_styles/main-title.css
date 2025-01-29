@@ -2,6 +2,10 @@
     height: calc(100vh - var(--navbar-height));
     padding-top: 0;
     padding-bottom: 0;
+    display: block;
+}
+#main-title > div {
+    height: calc(100vh - 2 * var(--navbar-height));
     display: flex;
     justify-content: center;
     align-items: center;

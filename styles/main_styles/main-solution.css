@@ -17,7 +17,7 @@
 .main-solutions-toggle {
     border: 1px solid var(--border-colors);
     background-color: var(--box-colors);
-    border-radius: 5px;
+    border-radius: 15px;
     margin-top: 2vh;
     margin-bottom: 1vh;
     padding: 2vh;
@@ -25,13 +25,30 @@
     flex-direction: column;
     justify-content: space-evenly;
     width: 85%;
-}
-.main-solutions-toggle > p {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 2s ease;
-}
-.main-solutions-toggle:hover > p {
-    max-height: 100vh;
     overflow: hidden;
 }
+
+/* 
+This article I found from a yt video was super helpful lol:
+https://keithjgrant.com/posts/2023/04/transitioning-to-height-auto/
+
+Don't forget it
+*/
+.main-solutions-toggle-wrapper {
+    display: grid;
+    grid-template-rows: 0fr;
+    opacity: 0;
+    transform: translateX(-100%);
+    filter: blur(1.5px);
+    transition: filter .5s, transform .35s, opacity .75s, grid-template-rows 0.5s ease-out;
+}
+.main-solutions-toggle:hover > .main-solutions-toggle-wrapper {
+    opacity: 1;
+    filter: blur(0px);
+    transform: translatex(0);
+    grid-template-rows: 1fr;
+}
+.main-solutions-toggle-wrapper > div {
+    overflow: hidden;
+}
+  
