@@ -44,7 +44,7 @@ Don't forget it
     filter: blur(1.5px);
     transition: filter .5s, transform .35s, opacity .75s, grid-template-rows 0.5s ease-out;
 }
-.main-solutions-toggle:hover > .main-solutions-toggle-wrapper {
+.main-solutions-toggle:hover > .main-solutions-toggle-wrapper, .main-solutions-toggle:active > .main-solutions-toggle-wrapper {
     opacity: 1;
     filter: blur(0px);
     transform: translatex(0);

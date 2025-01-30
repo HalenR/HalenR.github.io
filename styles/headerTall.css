@@ -48,7 +48,7 @@
     display: none;
 }
 
-#navbar-pagelinks-verticle-icon:hover {
+#navbar-pagelinks-verticle-icon:hover, #navbar-pagelinks-verticle-icon:active {
     height: 35vh;
     width: 50vw;
 }
