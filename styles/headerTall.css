@@ -16,13 +16,14 @@
     -moz-backface-visibility: hidden;
     -webkit-transform: translate3d(0, 0, 0);
     -moz-transform: translate3d(0, 0, 0);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
 
     box-sizing: border-box;
     background-color: var(--navbar-item-inactive-color);
     float: right;
     display: flex;
     flex-direction: column;
-    backdrop-filter: blur(10px);
     height: 100%;
     width: 100%;
     border: 3px solid var(--border-colors);
