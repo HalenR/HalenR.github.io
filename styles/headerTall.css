@@ -18,6 +18,7 @@
     -moz-transform: translate3d(0, 0, 0);
     -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
+    transform: translate3d(0, 0, 0);
 
     box-sizing: border-box;
     background-color: var(--navbar-item-inactive-color);
