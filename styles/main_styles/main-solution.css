@@ -1,4 +1,6 @@
-
+#main-solution {
+    padding-bottom: 10vh;
+}
 #main-solution > div > h1 {
     padding-bottom: 4vh;
     width: 80%;

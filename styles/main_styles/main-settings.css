@@ -22,3 +22,12 @@ main h3 {
     align-items: center;
     text-align: center;
 }
+
+/* To help understand the blocks?
+.main-item:nth-child(2n) {
+    background-color: darkgreen;
+}
+.main-item:nth-child(2n + 1) {
+    background-color: darkblue;
+}
+*/
