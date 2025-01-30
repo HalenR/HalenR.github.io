@@ -12,6 +12,8 @@
     margin-right: calc(.15 * 15vh);
 }
 #navbar-pagelinks-verticle-icon {
+    -webkit-backdrop-filter: blur(10px);
+
     box-sizing: border-box;
     background-color: var(--navbar-item-inactive-color);
     float: right;
@@ -48,7 +50,7 @@
     display: none;
 }
 
-#navbar-pagelinks-verticle-icon:hover, #navbar-pagelinks-verticle-icon:active {
+#navbar-pagelinks-verticle-icon:hover {
     height: 35vh;
     width: 50vw;
 }
