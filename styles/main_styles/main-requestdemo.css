@@ -1,28 +1,59 @@
-#main-form {
-    max-width: 640px;
-    width: 100%;
-    min-height: 3700px;
-}
-/* Styles for when the width is less than 1000px */
-@media (max-width: 640px) {
-    #main-form {
-        height: calc(3700px + 1.5*(640px - 100vw))
-    }
-}
-@media (max-width: 576px) {
-    #main-form {
-        height: calc(4700px + 1.5*(576px - 100vw))
-    }
-}
-@media (max-width: 403px) {
-    #main-form {
-        height: calc(5000px + 7.75*(403px - 100vw))
-    }
+#main-requestdemo {
+    display: flex;
+    flex-direction: column;
+    width: 95%;
 }
 
-#main-requestdemo {
-    width: 100%;
+#main-requestdemo > h2 {
+    padding-bottom: 7vh;
 }
-#main-requestdemo > div {
-    width: 100%;
+
+#main-requestdemo-button {
+    padding: 10px 30px;
+    font-weight: 400;
+    border: 2px solid var(--text-color);
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: color .25s, background-color .25s ease;
+}
+#main-requestdemo-button:hover {
+    background-color: var(--text-color);
+    color: var(--background-color);
+    cursor: pointer;
+}
+#main-requestdemo-button * {
+    font-weight: 500;
+    color: inherit;
+}
+
+#main-requestdemo-contain {
+    width: 0px;
+    transition: width .5s ease;
+    display: flex;
+    align-items: end;
+    justify-content: end;
+}
+#main-requestdemo-button:hover #main-requestdemo-contain {
+    width: 30px;
+}
+#main-requestdemo-arrow {
+    width: 0;
+	height: 0;
+    opacity: 0;
+    transform: translateX(-5px);
+    filter: blur(55px);
+	border-top: calc(var(--general-font-size) / 2 - 1px) solid transparent;
+	border-left: 12.5px solid;
+	border-bottom: calc(var(--general-font-size) / 2 - 1px) solid transparent;
+    transition: 
+        filter .25s, 
+        transform .5s ease-out, 
+        opacity .25s ease;
+}
+#main-requestdemo-button:hover #main-requestdemo-arrow {
+    transform: translateX(10px);
+    opacity: 1;
+    filter: blur(0px);
 }

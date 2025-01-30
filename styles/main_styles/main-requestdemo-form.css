@@ -1,0 +1,54 @@
+:root {
+    --toolbar-height: 10vh;
+}
+#main-requestdemo-form {
+    position: fixed;
+    background-color: rgba(0,0,0,.85); 
+    width:      100%;
+    height:     100%; 
+    z-index:    910;
+    top:        0; 
+    left:       0; 
+    overflow-y: auto;
+}
+
+#main-requestdemo-form-toolbar {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    height: var(--toolbar-height);
+}
+#main-requestdemo-form-exit {
+    height: var(--toolbar-height);
+    width: var(--toolbar-height);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+#main-requestdemo-form-exit > div {
+    position:absolute;
+    height: 70%;
+    width: 12%;
+    background-color: var(--text-color);
+    border-radius: 2px;
+}
+#main-requestdemo-form-exit > :first-child {
+    transform: rotate(45deg);
+}
+#main-requestdemo-form-exit > :last-child {
+    transform: rotate(-45deg);
+}
+.hide-overlay-form {
+    display: none;
+}
+.show-overlay-form {
+    display: flex;
+    flex-direction: column;
+
+}
+.scrollbar-stop {
+    height: 100%;
+    overflow: hidden;
+}
