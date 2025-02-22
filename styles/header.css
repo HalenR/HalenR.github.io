@@ -16,7 +16,7 @@ header {
     align-items: center;
     justify-content: center;
     margin-top: 100px; /* Moves down */
-    margin-left: 1000px; /*moves right */
+    margin-left: 800px; /*moves right */
 }
 #navbar {
     background-color: transparent;
