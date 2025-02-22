@@ -15,8 +15,8 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 100px; /* Moves down */
-    margin-left: 500px; /*moves right */
+    margin-top: 20px; /* Moves down */
+    margin-left: 50px; /*moves right */
 }
 #navbar {
     background-color: transparent;
