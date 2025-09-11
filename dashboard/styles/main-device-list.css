@@ -1,0 +1,12 @@
+
+#device-list {
+    width: 20%;
+    background-color: rgba(90, 90, 0, .1);
+}
+
+#device-list-titlebar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-bottom: 1px solid white;
+}

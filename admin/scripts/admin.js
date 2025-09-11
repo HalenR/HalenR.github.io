@@ -1,6 +1,8 @@
-const url = "https://website2.thermatechnology.com"; // Use this for production
+//const url = "https://website2.thermatechnology.com"; // Use this for production
+const url = "http://localhost:5000"; // Use this for development
 
 const loginForm = document.getElementById("login-Form");
+const logoutbtn = document.getElementById("logout-btn");
 const createDeviceForm = document.getElementById("create-device-form");
 const deleteDeviceBtn = document.getElementById("delete-device-btn");
 const addDeviceToAccountForm = document.getElementById("add-device-user-form");
@@ -41,6 +43,26 @@ loginForm.addEventListener("submit", async (event) => {
     }
 });
 
+logoutbtn.addEventListener("click", async () => {
+    try {
+        const response = await fetch(`${url}/user/logout`, {
+            method: "POST",
+            credentials: "include",
+        });
+
+        if (!response.ok) {
+            const error = await response.json();
+            console.log("Logout failed:", error);
+            return;
+        }
+
+        const result = await response.json();
+        console.log("Logout Success:", result);
+
+    } catch (error) {
+        console.log("Error during logout:", error);
+    }
+});
 
 createDeviceForm.addEventListener("submit", async (event) => {
     console.log("Create Device form submitted");
@@ -60,6 +82,8 @@ createDeviceForm.addEventListener("submit", async (event) => {
                 password: data.password,
                 deviceKey: data.key,
                 location: data.location,
+                latitude: data.latitude,
+                longitude: data.longitude,
             })
         });
 

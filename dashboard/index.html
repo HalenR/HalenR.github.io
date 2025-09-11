@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="icon" href="../images/thermatech_logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="./styles/styles.css">
+    <script type="module" src="./scripts/dashboard.js"></script>
+    <script type="module" src="./scripts/login-register-overlay.js"></script>
+    <script type="module" src="./scripts/login-register-logout.js"></script>
+</head>
+<body>
+    <header> <!-- Stetches across the top, includes register, login, and logout-->
+        <div id="header-title">
+            <h1>ThermaTech Dashboard</h1>
+        </div>
+        <div id="header-options">
+            <button id="register-btn">Register</button>
+            <button id="login-btn">Login</button>
+            <button id="logout-btn">Logout</button>
+        </div>
+    </header>
+    <main> <!-- Includes the device info and the list of devices -->
+        <section id="device-info"> <!-- Device info formatted based on the device selected -->
+            <p>Please Select a Device</p>
+            <!--
+            <section>
+                <h2>Rename Device</h2>
+                <form id="rename-device-form">
+                    <label for="device-rename-id">Device_id:</label>
+                    <input type="text" id="device-rename-id" name="device_id" required>
+                    <br>
+                    <label for="new-name">New Name:</label>
+                    <input type="text" id="new-name" name="new_name" required>
+                    <br>
+                    <button type="submit">Rename</button>
+                </form>
+            </section>
+            -->
+        </section>
+        <section id="device-list"> <!-- List of devices connected to the account -->
+            <div id="device-list-titlebar">
+                <h2>Devices</h2>
+                <button id="refresh-devices">Refresh Device List</button>
+            </div>
+            <div id="device-list-devices">
+                <p>Please log in or add devices to your account</p>
+            </div>
+        </section>
+    </main>
+
+
+    <!-- Login and Register Overlays-->
+    <div id="mode-overlay" class="overlay hidden">
+        <!-- Login Mode -->
+        <div id="login-mode" class="mode hidden">
+            <h2>Login</h2>
+            <button class="close-btn">&times;</button>
+            <form id="login-Form">
+                <label for="login-form-email">Email:</label>
+                <input type="email" id="login-form-email" name="email" required>
+                <br>
+                <label for="login-form-password">Password:</label>
+                <input type="password" id="login-form-password" name="password" required>
+                <br>
+                <button type="submit">Login</button>
+            </form>
+        </div>
+
+        <!-- Register Mode -->
+        <div id="register-mode" class="mode hidden">
+            <h2>Register</h2>
+            <button class="close-btn">&times;</button>
+            <form id="register-Form">
+                <label for="register-form-email">Email:</label>
+                <input type="email" id="register-form-email" name="email" required>
+                <br>
+                <label for="register-form-password">Password:</label>
+                <input type="password" id="register-form-password" name="password" required>
+                <br>
+                <button type="submit">Register</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

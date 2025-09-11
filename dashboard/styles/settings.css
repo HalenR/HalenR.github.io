@@ -1,0 +1,33 @@
+:root {
+    /* Colors */
+    --background-color: rgb(42, 46, 48);
+    --text-color: rgb(230, 232, 234);
+}
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    text-decoration: none;
+    color: var(--text-color);
+    font-family: 'Calibri';
+    font-weight: 100;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+body {
+    background-color: var(--background-color);
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+input {
+    border: 1px solid rgb(230, 230, 230);
+    background-color: rgb(10, 10, 10);
+}
+
+button {
+    background-color: rgb(10, 10, 10);
+}
