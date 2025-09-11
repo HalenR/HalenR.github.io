@@ -1,5 +1,9 @@
-//const url = "https://website2.thermatechnology.com"; // Use this for production
-const url = "http://localhost:5000"; // Use this for development
+import { displayMessageResponse, processResponse } from "./status-message.js";
+import { renderDeviceList } from "./dashboard-list.js";
+import { clearAreas } from "./clearing-data.js";
+
+const url = "https://website.thermatechnology.com"; // Use this for production
+//const url = "http://localhost:5000"; // Use this for development
 
 const registerForm = document.getElementById("register-Form");
 const loginForm = document.getElementById("login-Form");
@@ -33,6 +37,7 @@ registerForm.addEventListener("submit", async (event) => {
         hideModes();
 
     } catch (error) {
+        displayMessageResponse({message: "Error Registering"}, response.status);
         console.log("Error during registration:", error);
     }
 });
@@ -61,17 +66,19 @@ loginForm.addEventListener("submit", async (event) => {
             return;
         }
 
-        console.log("Login Success");
-        getDeviceList();
-        console.log(result);
         hideModes();
 
+        // Assuming you successfully logged in, we should render the users device list
+        renderDeviceList();
+
     } catch (error) {
+        displayMessageResponse({message: "Error Logging In"}, response.status);
         console.log("Error during login:", error);
     }
 });
 
 logoutbtn.addEventListener("click", async () => {
+    clearAreas();
     try {
         const response = await fetch(`${url}/user/logout`, {
             method: "POST",

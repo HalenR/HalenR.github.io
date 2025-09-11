@@ -6,7 +6,10 @@
     <title>Dashboard</title>
     <link rel="icon" href="../images/thermatech_logo.png" type="image/x-icon">
     <link rel="stylesheet" href="./styles/styles.css">
-    <script type="module" src="./scripts/dashboard.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns"></script>
+    <script type="module" src="./scripts/dashboard-info.js"></script>
+    <script type="module" src="./scripts/dashboard-list.js"></script>
     <script type="module" src="./scripts/login-register-overlay.js"></script>
     <script type="module" src="./scripts/login-register-logout.js"></script>
 </head>
@@ -23,29 +26,13 @@
     </header>
     <main> <!-- Includes the device info and the list of devices -->
         <section id="device-info"> <!-- Device info formatted based on the device selected -->
-            <p>Please Select a Device</p>
-            <!--
-            <section>
-                <h2>Rename Device</h2>
-                <form id="rename-device-form">
-                    <label for="device-rename-id">Device_id:</label>
-                    <input type="text" id="device-rename-id" name="device_id" required>
-                    <br>
-                    <label for="new-name">New Name:</label>
-                    <input type="text" id="new-name" name="new_name" required>
-                    <br>
-                    <button type="submit">Rename</button>
-                </form>
-            </section>
-            -->
         </section>
         <section id="device-list"> <!-- List of devices connected to the account -->
             <div id="device-list-titlebar">
                 <h2>Devices</h2>
-                <button id="refresh-devices">Refresh Device List</button>
+                <button id="refresh-devices">⟳</button>
             </div>
             <div id="device-list-devices">
-                <p>Please log in or add devices to your account</p>
             </div>
         </section>
     </main>

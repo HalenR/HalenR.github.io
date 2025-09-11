@@ -1,4 +1,4 @@
-//const url = "https://website2.thermatechnology.com"; // Use this for production
+//const url = "https://website.thermatechnology.com"; // Use this for production
 const url = "http://localhost:5000"; // Use this for development
 
 const loginForm = document.getElementById("login-Form");

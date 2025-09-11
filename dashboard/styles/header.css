@@ -14,4 +14,25 @@ header {
 
 #header-options {
     margin-right: 15px;
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    gap: 15px;
+    align-items: center;
+}
+
+#header-options > button {
+    --pads: 10px;
+    font-size: 1.25rem;
+    background-color: var(--background-color-accent);
+    height: 80%;
+    max-height: calc(1.25rem + (2 * var(--pads)));
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 10px;
+    border: 1px solid white;
+}
+#header-options > button:hover {
+    background-color: var(--background-color-accent2);
+
 }

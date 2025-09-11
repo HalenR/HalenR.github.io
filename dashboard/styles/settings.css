@@ -1,6 +1,11 @@
 :root {
     /* Colors */
     --background-color: rgb(42, 46, 48);
+    --background-color-accent: rgba(140, 140, 180, .1);
+    --background-color-accent2: rgba(140, 140, 180, .4);
+    --accent-color: rgb(108, 229, 232);
+    --accent-color-on: rgb(175, 255, 255);
+    --accent-color-area: rgba(108, 229, 232, .5);
     --text-color: rgb(230, 232, 234);
 }
 * {
@@ -25,9 +30,5 @@ body {
 }
 input {
     border: 1px solid rgb(230, 230, 230);
-    background-color: rgb(10, 10, 10);
-}
-
-button {
     background-color: rgb(10, 10, 10);
 }

@@ -42,6 +42,14 @@ const displayMessageResponse = (response, status) => {
 };
 
 
-
+// Processes server responses and displays errors or statuses if needed, returns the result or "Success" when successful
+const processResponse = async (response) => {
+    const result = await response.json();
+    displayMessageResponse(result, response.status);
+    if (!(response.status === 200)) {
+        return null;
+    }
+    return result || "Success";
+}
  
-export { displayMessageResponse };
+export { displayMessageResponse, processResponse };

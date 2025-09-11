@@ -1,4 +1,92 @@
 #device-info {
     width: 80%;
-    background-color: rgba(90, 0, 90, .1);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+#info-title {
+    flex: 0 0 10%;
+    font-size: 1.5em;
+    padding-left: 15px;
+    display: flex;
+    align-items: center;
+}
+#info-location {
+    flex: 0 0 10%;
+    font-size: 1.5em;
+    padding-left: 15px;
+    display: flex;
+    align-items: flex-start;
+}
+#info-graph {
+    flex: 0 0 80%;
+    display: flex;
+    flex-direction: row;
+
+}
+#graph-and-time {
+    flex: 0 0 70%;
+    display: flex;
+    flex-direction: column;
+    transform: translateY(-20px);
+}
+
+#graph-area {
+  height: 90%;              /* Takes up 90% of its parent’s height */
+  width: 100%;              /* Full width of parent */
+  position: relative;       /* Required for Chart.js to size properly */
+  display: flex;            /* Optional: centers canvas */
+  justify-content: center;  /* Optional */
+  align-items: center;      /* Optional */
+  transform: translateX(-10px);
+}
+
+#graph-area canvas {
+  width: 100% !important;   /* Forces canvas to match container width */
+  height: 100% !important;  /* Forces canvas to match container height */
+  display: block;
+}
+
+
+
+#time-selection {
+    padding-right: 10px;
+    padding-left: 10px;
+    flex: 0 0 10%;
+    display: flex;
+    gap: 10%;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+#time-selection > button {
+    border-radius: 20px;
+    width: 50%;
+    height: 90%;
+    color: var(--background-color)
+}
+#float-selection {
+    flex: 0 0 30%;
+    gap: 10px;
+    padding-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+#float-selection > button {
+    flex: 1 1 auto;
+    width: 70%;
+    border-radius: 20px;
+    color: var(--background-color);
+}
+
+.button-selection {
+    border: 2px solid var(--accent-color);
+    background-color: var(--accent-color);
+}
+.selected {
+    border: 2px solid white;
+    background-color: var(--accent-color-on);
 }
