@@ -1,5 +1,5 @@
-//const url = "https://website.thermatechnology.com"; // Use this for production
-const url = "http://localhost:5000"; // Use this for development
+const url = "https://website.thermatechnology.com"; // Use this for production
+//const url = "http://localhost:5000"; // Use this for development
 
 const loginForm = document.getElementById("login-Form");
 const logoutbtn = document.getElementById("logout-btn");
