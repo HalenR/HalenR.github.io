@@ -16,14 +16,15 @@ const logFormatTimeInfo = {
 }
 
 const logFormatFloatsInfo = {
-    0: "Value 1",
-    1: "Value 2",
-    2: "Value 3",
-    3: "Value 4",
-    4: "Value 5",
-    5: "Value 6",
-    6: "Value 7",
+    0: "Compressor Power Usage (V)",
+    1: "Fan Power Usage (V)",
+    2: "Vibration Sensor 1 (V)",
+    3: "Vibration Sensor 2 (V)",
+    4: "Vibration Sensor 3 (V)",
+    5: "Vibration Sensor 4 (V)",
+    6: "Vibration Sensor 5 (V)",
 };
+
 
 
 const exampleLogs1 = Array.from({ length: 30 }, (_, i) => ({
@@ -38,7 +39,6 @@ const exampleLogs3 = Array.from({ length: 30 }, (_, i) => ({
     createdAt: `2025-06-${String(i + 1).padStart(2, '0')}T00:00:00.000+00:00`,
     floats: [i+10, i+1, i+2, i*1.5, i*.5, i**.5, i**1.5],
 }));
-
 
 
 // Returns the current logs, or null if error
@@ -260,6 +260,8 @@ const generateGraph = (data, index) => {
                 },
                 y: {
                     beginAtZero: false,
+                    suggestedMin: Math.min(...chartData.map(d => d.y)), // maybe 0?
+                    suggestedMax: Math.max(...chartData.map(d => d.y)),
                     title: {
                         display: true,
                         text: logFormatFloatsInfo[index] || 'Float Value'
