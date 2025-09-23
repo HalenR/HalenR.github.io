@@ -44,12 +44,14 @@ registerForm.addEventListener("submit", async (event) => {
 });
 
 loginForm.addEventListener("submit", async (event) => {
-    console.log("Login form submitted");
     event.preventDefault();
+    console.log("Login form submitted");
 
     const formData = new FormData(loginForm);
     const data = Object.fromEntries(formData.entries());
+
     try {
+        // Send login request
         const response = await fetch(`${url}/user/login`, {
             method: "POST",
             credentials: "include",
@@ -62,29 +64,46 @@ loginForm.addEventListener("submit", async (event) => {
             })
         });
 
-        const result = await processResponse(response);
-        if (!result) {
+        // Check HTTP status first
+        if (!response.ok) {
+            console.error("❌ Login failed with HTTP status:", response.status);
+            displayMessageResponse({ message: "Login failed" }, response.status);
             return;
         }
 
-        if (result) {
-            console.log("✅ Login successful, hiding login screen...");
-            loginScreen.classList.add("hidden");
-            hideModes?.();
-            renderDeviceList?.();
+        // Safely parse response JSON
+        let result;
+        try {
+            result = await response.json();
+        } catch (parseError) {
+            console.error("Failed to parse login response JSON:", parseError);
+            displayMessageResponse({ message: "Error parsing server response" }, 0);
+            return;
         }
 
+        // Check backend login success field
+        // Replace 'success' with whatever your backend actually returns
+        if (!result.success) {
+            console.error("❌ Login failed according to server response:", result);
+            displayMessageResponse({ message: result.message || "Login failed" }, response.status);
+            return;
+        }
+
+        // Login successful
+        console.log("✅ Login successful, hiding login screen...");
+        loginScreen.classList.add("hidden");
+
+        // Optional helpers (safe with ?. in case not defined)
+        hideModes?.();
+        renderDeviceList?.();
 
     } catch (error) {
-    console.error("Error during login:", error);
-
-    // use error, not response
-    displayMessageResponse(
-        { message: "Error Logging In" },
-        error.status || 0
-    );
+        // Only triggered for network/JS errors
+        console.error("Error during login:", error);
+        displayMessageResponse({ message: "Error Logging In" }, error.status || 0);
     }
 });
+
 
 logoutbtn.addEventListener("click", async () => {
     clearAreas();
