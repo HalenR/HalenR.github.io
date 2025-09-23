@@ -88,7 +88,7 @@ loginForm.addEventListener("submit", async (event) => {
         { message: "Error Logging In" },
         error.status || 0
     );
-});
+};
 
 logoutbtn.addEventListener("click", async () => {
     clearAreas();
