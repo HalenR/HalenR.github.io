@@ -81,9 +81,13 @@ loginForm.addEventListener("submit", async (event) => {
 
 
     } catch (error) {
-        displayMessageResponse({message: "Error Logging In"}, response.status);
-        console.log("Error during login:", error);
-    }
+    console.error("Error during login:", error);
+
+    // use error, not response
+    displayMessageResponse(
+        { message: "Error Logging In" },
+        error.status || 0
+    );
 });
 
 logoutbtn.addEventListener("click", async () => {
