@@ -67,14 +67,14 @@ loginForm.addEventListener("submit", async (event) => {
             return;
         }
         // loginScreen.classList.add('hidden');
-        hideModes();
+        //hideModes();
 
         // Assuming you successfully logged in, we should render the users device list
         renderDeviceList();
 
         if (result) {
             console.log("✅ Login successful, hiding login screen...");
-            loginScreen.classList.add("hidden");   // <hides the whole box
+            loginScreen.classList.add("hidden");
             hideModes?.();
             renderDeviceList?.();
         }
