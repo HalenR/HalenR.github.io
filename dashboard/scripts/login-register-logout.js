@@ -8,6 +8,7 @@ const url = "https://website.thermatechnology.com"; // Use this for production
 const registerForm = document.getElementById("register-Form");
 const loginForm = document.getElementById("login-Form");
 const logoutbtn = document.getElementById("logout-btn");
+const loginScreen = document.getElementById("login-mode");
 
 
 registerForm.addEventListener("submit", async (event) => {
