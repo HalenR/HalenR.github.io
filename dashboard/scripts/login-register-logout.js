@@ -81,6 +81,9 @@ loginForm.addEventListener("submit", async (event) => {
             return;
         }
 
+        console.log("Server response raw:", result);
+        console.log("Normalized message:", result.message?.toLowerCase().trim());
+
         const loginSuccessful =
             result.success === true || result.message?.toLowerCase().includes("login successful");
 
