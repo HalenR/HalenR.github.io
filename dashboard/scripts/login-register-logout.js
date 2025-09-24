@@ -81,9 +81,6 @@ loginForm.addEventListener("submit", async (event) => {
             return;
         }
 
-        console.log("Server response raw:", result);
-        console.log("Normalized message:", result.message?.toLowerCase().trim());
-
         const loginSuccessful =
             result.success === true || result.message?.toLowerCase().includes("login successful");
 
@@ -96,6 +93,7 @@ loginForm.addEventListener("submit", async (event) => {
         // ✅ Login successful
         console.log("✅ Login successful, hiding login screen...");
         loginScreen.classList.add("hidden");
+        overlay.classList.add('hidden');
 
         // Optional helpers (safe with ?. in case not defined)
         renderDeviceList?.();
