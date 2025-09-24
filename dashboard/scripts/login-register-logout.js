@@ -98,7 +98,7 @@ loginForm.addEventListener("submit", async (event) => {
         loginScreen.classList.add("hidden");
 
         // Optional helpers (safe with ?. in case not defined)
-        hideModes?.();
+        //hideModes?.();
         renderDeviceList?.();
 
     } catch (error) {
