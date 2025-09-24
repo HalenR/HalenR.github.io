@@ -81,15 +81,16 @@ loginForm.addEventListener("submit", async (event) => {
             return;
         }
 
-        // Check backend login success field
-        // Replace 'success' with whatever your backend actually returns
-        if (!result.success) {
+        const loginSuccessful =
+            result.success === true || result.message?.toLowerCase().includes("login successful");
+
+        if (!loginSuccessful) {
             console.error("❌ Login failed according to server response:", result);
             displayMessageResponse({ message: result.message || "Login failed" }, response.status);
             return;
         }
 
-        // Login successful
+        // ✅ Login successful
         console.log("✅ Login successful, hiding login screen...");
         loginScreen.classList.add("hidden");
 
