@@ -9,6 +9,7 @@ const registerForm = document.getElementById("register-Form");
 const loginForm = document.getElementById("login-Form");
 const logoutbtn = document.getElementById("logout-btn");
 const loginScreen = document.getElementById("login-mode");
+const overlay = document.getElementById('mode-overlay');
 
 
 registerForm.addEventListener("submit", async (event) => {
